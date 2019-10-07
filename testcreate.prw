@@ -52,7 +52,8 @@ Function CreateCase(cNameCase,cBaseline,cDir,cCnpj,cNomeMun,cCodMun,cUF,cLogin,c
 
 	cTestCase += '	DATA cLOGIN' + CRLF
 	cTestCase += '	DATA cPASS' + CRLF
-	cTestCase += '	DATA cMAXLOTE' + CRLF + CRLF
+	cTestCase += '	DATA cMAXLOTE' + CRLF
+	cTestCase += '	DATA cVERSAONFSE' + CRLF + CRLF
 
 	cTestCase += '	DATA nTime' + CRLF
 	cTestCase += '	DATA nExec' + CRLF
@@ -77,13 +78,13 @@ Function CreateCase(cNameCase,cBaseline,cDir,cCnpj,cNomeMun,cCodMun,cUF,cLogin,c
 	cTestCase += '	METHOD NFSE_013()' + CRLF
 	cTestCase += '	METHOD NFSE_014()' + CRLF
 	cTestCase += '	METHOD NFSE_015()' + CRLF
-	cTestCase += '	METHOD NFSE_016()' + CRLF 
-	cTestCase += '	METHOD NFSE_017()' + CRLF 
-	cTestCase += '	METHOD NFSE_018()' + CRLF 
-	cTestCase += '	METHOD NFSE_019()' + CRLF 
-	cTestCase += '	METHOD NFSE_020()' + CRLF 
-	cTestCase += '	METHOD NFSE_021()' + CRLF 
-	cTestCase += '	METHOD NFSE_022()' + CRLF 
+	cTestCase += '	METHOD NFSE_016()' + CRLF
+	cTestCase += '	METHOD NFSE_017()' + CRLF
+	cTestCase += '	METHOD NFSE_018()' + CRLF
+	cTestCase += '	METHOD NFSE_019()' + CRLF
+	cTestCase += '	METHOD NFSE_020()' + CRLF
+	cTestCase += '	METHOD NFSE_021()' + CRLF
+	cTestCase += '	METHOD NFSE_022()' + CRLF + CRLF
 
 	cTestCase += 'ENDCLASS' + CRLF + CRLF
 
@@ -108,10 +109,11 @@ Function CreateCase(cNameCase,cBaseline,cDir,cCnpj,cNomeMun,cCodMun,cUF,cLogin,c
 	cTestCase += '::cLOGIN    := "' + alltrim(cLogin) + '"' + CRLF
 	cTestCase += '::cPASS     := "' + alltrim(cPass) + '"' + CRLF
 	cTestCase += '::cMAXLOTE  := "' + cMaxLote + '"' + CRLF
+	cTestCase += '::cVERSAONFSE := "' + SubStr(cVersao,2,1) + '.' + SubStr(cVersao,3,2) + '"' + CRLF
 	cTestCase += '// Intervalo de TEMPO entre consultas na prefeitura' + CRLF
 	cTestCase += '::nTime     := 10000' + CRLF
 	cTestCase += '// Número de consultas na prefeitura' + CRLF
-	cTestCase += '::nExec     := 50' + CRLF
+	cTestCase += '::nExec     := 20' + CRLF
 	cTestCase += '// CASOS de TESTE' + CRLF
 	cTestCase += '::AddTestMethod("NFSE_001",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO")' + CRLF
 	cTestCase += '::AddTestMethod("NFSE_002",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_INTERMEDIARIO")' + CRLF
@@ -130,11 +132,9 @@ Function CreateCase(cNameCase,cBaseline,cDir,cCnpj,cNomeMun,cCodMun,cUF,cLogin,c
 	cTestCase += '::AddTestMethod("NFSE_015",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EXTERIOR")' + CRLF 
 	cTestCase += '::AddTestMethod("NFSE_016",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_SEM_TOMADOR")' + CRLF 
 	cTestCase += '::AddTestMethod("NFSE_017",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_COD_OBRA")' + CRLF 
-	cTestCase += '::AddTestMethod("NFSE_018",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EXIG_SUSP_DEC_JUDICIAL")' + CRLF 
-	cTestCase += '::AddTestMethod("NFSE_019",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EXIG_SUSP_PROC_ADM")' + CRLF 
-	cTestCase += '::AddTestMethod("NFSE_020",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_CARACTERES_ESPECIAIS")' + CRLF 
-	cTestCase += '::AddTestMethod("NFSE_021",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EMISSAO_MAXLOTE")' + CRLF 
-	cTestCase += '::AddTestMethod("NFSE_022",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EXTERIOR")' + CRLF 
+	cTestCase += '::AddTestMethod("NFSE_018",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_CARACTERES_ESPECIAIS")' + CRLF 
+	cTestCase += '::AddTestMethod("NFSE_019",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EMISSAO_MAXLOTE")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_020",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EMISSAO_SUBSTITUIÇÃO")' + CRLF
 
 	cTestCase += 'Return' + CRLF + CRLF
 
@@ -202,13 +202,13 @@ Function CreateCase(cNameCase,cBaseline,cDir,cCnpj,cNomeMun,cCodMun,cUF,cLogin,c
 	cTestCase += CreateMethod("017",cNameCase, cSerie, aCheck)
 	
 	//NFSE_018 - CARACTERES_ESPECIAIS
-	cTestCase += CreateMethod("020",cNameCase, cSerie, aCheck)
+	cTestCase += CreateMethod("018",cNameCase, cSerie, aCheck)
 	
-	//NFSE_019 - EMISSÃO_EMISSAO_MAXLOTE
-	cTestCase += CreateMethod("021",cNameCase, cSerie, aCheck)
+	//NFSE_019 - MAXLOTE
+	cTestCase += CreateMethod("019",cNameCase, cSerie, aCheck)
 	
 	//NFSE_020 - SUBSTITUIÇÃO
-	cTestCase += CreateMethod("022",cNameCase, cSerie, aCheck)
+	cTestCase += CreateMethod("020",cNameCase, cSerie, aCheck)
 
 
 	lSuccess := MemoWrite( cDir + "\" + cNameCase + cExt, cTestCase )
@@ -437,10 +437,10 @@ Function CreateMethod(cNumMethod, cNameCase, cSerie, aCheck)
 	cTestMethod += '* aOperacao[1,2] = Vetor indicando as Operações p/a Substituição da 1a Nota. _NFSE_001_SUBSTNOTA001.XML (não obrigatório)' + CRLF + CRLF
 	cTestMethod += '*/' + CRLF
 	cTestMethod += 'aAdd(aOperacao, {aSubOper , aSubOper})' + CRLF
-	if cNumMethod == '022'	
+	if cNumMethod == '019' .Or. cNumMethod == '020'
 		cTestMethod += 'aAdd(aOperacao, {aSubOper , aSubOper})' + CRLF
 	EndIf
-	cTestMethod += 'oProcess := oTSS:AUTNFSE_XXX(cTest, aOperacao,::cCNPJ,::cCPF,::cIE,::cEstado,::cCodMun,::cDirTestCase,::cLOGIN,::cPASS,::cMAXLOTE,::nTime,::nExec)' + CRLF
+	cTestMethod += 'oProcess := oTSS:AUTNFSE_XXX(cTest, aOperacao,::cCNPJ,::cCPF,::cIE,::cEstado,::cCodMun,::cDirTestCase,::cLOGIN,::cPASS,::cMAXLOTE,::cVERSAONFSE,::nTime,::nExec)' + CRLF
 	cTestMethod += 'If oProcess == Nil .Or. !oProcess:lOk' + CRLF
 	cTestMethod += '    oHelper:UTPutError( oProcess:cAssertFailMessage + CHR(10) + oProcess:cMessages)' + CRLF
 	cTestMethod += '    oHelper:AssertTrue(.F.,"Erro ao Executar "+cTest)' + CRLF
@@ -452,5 +452,3 @@ Function CreateMethod(cNumMethod, cNameCase, cSerie, aCheck)
 	cTestMethod += 'Return oHelper' + CRLF + CRLF
 
 Return cTestMethod
-
-
