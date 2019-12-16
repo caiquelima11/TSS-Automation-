@@ -443,7 +443,7 @@ Function CreateMethod(cNumMethod, cNameCase, cSerie, aCheck)
 	cTestMethod += 'oProcess := oTSS:AUTNFSE_XXX(cTest, aOperacao,::cCNPJ,::cCPF,::cIE,::cEstado,::cCodMun,::cDirTestCase,::cLOGIN,::cPASS,::cMAXLOTE,::cVERSAONFSE,::nTime,::nExec)' + CRLF
 	cTestMethod += 'If oProcess == Nil .Or. !oProcess:lOk' + CRLF
 	cTestMethod += '    oHelper:UTPutError( oProcess:cAssertFailMessage + CHR(10) + oProcess:cMessages)' + CRLF
-	cTestMethod += '    oHelper:AssertTrue(.F.,"Erro ao Executar "+cTest)' + CRLF
+	cTestMethod += '    oHelper:AssertTrue(.F.,"Erro ao Executar "+cTest + CHR(10) + oProcess:cAssertFailMessage + CHR(10) + oProcess:cMessages)' + CRLF
 	cTestMethod += 'Else' + CRLF
 	cTestMethod += '    oHelper:AssertTrue(.T.,"Sucesso ao Executar "+cTest )' + CRLF
 	cTestMethod += 'EndIF' + CRLF
