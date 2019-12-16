@@ -407,7 +407,7 @@ Function CreateMethod(cNumMethod, cNameCase, cSerie, aCheck, cCodMun)
 	
 	cTestMethod += 'METHOD ' + cCodMun + 'NFSE_' + cNumMethod + '() CLASS ' + cNameCase + CRLF
 	cTestMethod += 'Local aOperacao   := {}' + CRLF
-	cTestMethod += 'Local cTest		  := "NFSE_' + cNumMethod + '"' + CRLF
+	cTestMethod += 'Local cTest		  := "' + cCodMun + 'NFSE_' + cNumMethod + '"' + CRLF
 	cTestMethod += 'Local oHelper     := FWTestHelper():New()' + CRLF
 	cTestMethod += 'Local oProcess    ' + CRLF
 	cTestMethod += 'Local oTSS         := TSSXAUTONFSETestCase():New()' + CRLF
