@@ -63,30 +63,28 @@ Function CreateCase(cNameCase,cBaseline,cDir,cCnpj,cNomeMun,cCodMun,cUF,cLogin,c
 
 	cTestCase += '	METHOD ' + cNameCase + '() CONSTRUCTOR' + CRLF + CRLF
 
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_001()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_002()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_003()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_004()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_005()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_006()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_007()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_008()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_009()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_010()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_011()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_012()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_013()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_014()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_015()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_016()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_017()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_018()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_019()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_020()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_021()' + CRLF
-	cTestCase += '	' + cCodMun + 'METHOD NFSE_022()' + CRLF + CRLF
-
-	cTestCase += 'ENDCLASS' + CRLF + CRLF
+	cTestCase += '	METHOD NFSE_001()' + CRLF
+	cTestCase += '	METHOD NFSE_002()' + CRLF
+	cTestCase += '	METHOD NFSE_003()' + CRLF
+	cTestCase += '	METHOD NFSE_004()' + CRLF
+	cTestCase += '	METHOD NFSE_005()' + CRLF
+	cTestCase += '	METHOD NFSE_006()' + CRLF
+	cTestCase += '	METHOD NFSE_007()' + CRLF
+	cTestCase += '	METHOD NFSE_008()' + CRLF
+	cTestCase += '	METHOD NFSE_009()' + CRLF
+	cTestCase += '	METHOD NFSE_010()' + CRLF
+	cTestCase += '	METHOD NFSE_011()' + CRLF
+	cTestCase += '	METHOD NFSE_012()' + CRLF
+	cTestCase += '	METHOD NFSE_013()' + CRLF
+	cTestCase += '	METHOD NFSE_014()' + CRLF
+	cTestCase += '	METHOD NFSE_015()' + CRLF
+	cTestCase += '	METHOD NFSE_016()' + CRLF
+	cTestCase += '	METHOD NFSE_017()' + CRLF
+	cTestCase += '	METHOD NFSE_018()' + CRLF
+	cTestCase += '	METHOD NFSE_019()' + CRLF
+	cTestCase += '	METHOD NFSE_020()' + CRLF
+	cTestCase += '	METHOD NFSE_021()' + CRLF
+	cTestCase += '	ENDCLASS' + CRLF + CRLF
 
 	cTestCase += '//-------------------------------------------------------------------' + CRLF
 	cTestCase += '/*/{Protheus.doc} ' + cNameCase + CRLF
@@ -115,26 +113,26 @@ Function CreateCase(cNameCase,cBaseline,cDir,cCnpj,cNomeMun,cCodMun,cUF,cLogin,c
 	cTestCase += '// Número de consultas na prefeitura' + CRLF
 	cTestCase += '::nExec     := 20' + CRLF
 	cTestCase += '// CASOS de TESTE' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_001",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_002",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_INTERMEDIARIO")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_003",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_DEDUCAO_REDUCAO_ISS")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_004",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_DESCONTO_CONDICIONAL_INCONDICIONADO")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_005",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_SIMPLES_NACIONAL")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_006",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_ISSRETIDO_IMPOSTOS")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_007",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_TOMADOR_PESSOA_FISICA")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_008",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_ISENÇÃO")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_009",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_IMUNE")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_010",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_IMPOSTOS")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_011",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_TRIBUTAÇÃO_FORA_DO_MUNICÍPIO")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_012",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EXIGIBILIDADE_SUSP_DEC_JUDICIAL")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_013",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EXIGIBILIDADE_SUSP_PROC_ADM")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_014",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_PARCELAMENTO_E_CONDIÇÃO_DE_PAGAMENTO")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_015",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EXTERIOR")' + CRLF 
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_016",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_SEM_TOMADOR")' + CRLF 
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_017",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_COD_OBRA")' + CRLF 
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_018",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_CARACTERES_ESPECIAIS")' + CRLF 
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_019",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EMISSAO_MAXLOTE")' + CRLF
-	cTestCase += '::AddTestMethod("' + cCodMun + 'NFSE_020",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EMISSAO_SUBSTITUIÇÃO")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_001",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_002",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_INTERMEDIARIO")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_003",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_DEDUCAO_REDUCAO_ISS")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_004",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_DESCONTO_CONDICIONAL_INCONDICIONADO")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_005",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_SIMPLES_NACIONAL")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_006",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_ISSRETIDO_IMPOSTOS")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_007",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_TOMADOR_PESSOA_FISICA")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_008",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_ISENÇÃO")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_009",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_IMUNE")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_010",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_IMPOSTOS")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_011",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_TRIBUTAÇÃO_FORA_DO_MUNICÍPIO")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_012",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EXIGIBILIDADE_SUSP_DEC_JUDICIAL")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_013",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EXIGIBILIDADE_SUSP_PROC_ADM")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_014",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_PARCELAMENTO_E_CONDIÇÃO_DE_PAGAMENTO")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_015",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EXTERIOR")' + CRLF 
+	cTestCase += '::AddTestMethod("NFSE_016",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_SEM_TOMADOR")' + CRLF 
+	cTestCase += '::AddTestMethod("NFSE_017",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_COD_OBRA")' + CRLF 
+	cTestCase += '::AddTestMethod("NFSE_018",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_CARACTERES_ESPECIAIS")' + CRLF 
+	cTestCase += '::AddTestMethod("NFSE_019",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EMISSAO_MAXLOTE")' + CRLF
+	cTestCase += '::AddTestMethod("NFSE_020",,"NFSE_ÚNICO_' + cUF + '_' + cNomeMun + '_' + cCodMun + '_01_EMISSÃO_EMISSAO_SUBSTITUIÇÃO")' + CRLF
 	cTestCase += 'Return' + CRLF + CRLF
 
 	cTestCase += '//-------------------------------------------------------------------' + CRLF
@@ -404,10 +402,11 @@ Function CreateMethod(cNumMethod, cNameCase, cSerie, aCheck, cCodMun)
     DEFAULT cNameCase   := ""
     DEFAULT cSerie		:= "" 
 	DEFAULT aCheck      := ""
+	DEFAULT cCodMun		:= ""
 	
-	cTestMethod += 'METHOD ' + cCodMun + 'NFSE_' + cNumMethod + '() CLASS ' + cNameCase + CRLF
+	cTestMethod += 'METHOD NFSE_' + cNumMethod + '() CLASS ' + cNameCase + CRLF
 	cTestMethod += 'Local aOperacao   := {}' + CRLF
-	cTestMethod += 'Local cTest		  := "' + cCodMun + 'NFSE_' + cNumMethod + '"' + CRLF
+	cTestMethod += 'Local cTest		  := "NFSE_' + cNumMethod + '"' + CRLF
 	cTestMethod += 'Local oHelper     := FWTestHelper():New()' + CRLF
 	cTestMethod += 'Local oProcess    ' + CRLF
 	cTestMethod += 'Local oTSS         := TSSXAUTONFSETestCase():New()' + CRLF
@@ -442,7 +441,7 @@ Function CreateMethod(cNumMethod, cNameCase, cSerie, aCheck, cCodMun)
 	cTestMethod += 'oProcess := oTSS:AUTNFSE_XXX(cTest, aOperacao,::cCNPJ,::cCPF,::cIE,::cEstado,::cCodMun,::cDirTestCase,::cLOGIN,::cPASS,::cMAXLOTE,::cVERSAONFSE,::nTime,::nExec)' + CRLF
 	cTestMethod += 'If oProcess == Nil .Or. !oProcess:lOk' + CRLF
 	cTestMethod += '    oHelper:UTPutError( oProcess:cAssertFailMessage + CHR(10) + oProcess:cMessages)' + CRLF
-	cTestMethod += '    oHelper:AssertTrue(.F.,"Erro ao Executar "+cTest + CHR(10) + oProcess:cAssertFailMessage + CHR(10) + oProcess:cMessages)' + CRLF
+	cTestMethod += '    oHelper:AssertTrue(.F.,"Erro ao Executar "+cTest  + " - Mun: " + ::cCodMun  + " - Data: " + DTOC(date()) + " - Hora: " + time() + CHR(10) + oProcess:cAssertFailMessage + CHR(10) + oProcess:cMessages)' + CRLF
 	cTestMethod += 'Else' + CRLF
 	cTestMethod += '    oHelper:AssertTrue(.T.,"Sucesso ao Executar "+cTest )' + CRLF
 	cTestMethod += 'EndIF' + CRLF
